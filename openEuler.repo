@@ -1,0 +1,15 @@
+[everything_SP2]
+name=everything_SP2
+baseurl=http://repo.openeuler.org/openEuler-22.03-LTS-SP2/everything/$basearch/
+metadata_expire=1h
+enabled=1
+gpgcheck=1
+gpgkey=http://repo.openeuler.org/openEuler-22.03-LTS-SP2/everything/$basearch/RPM-GPG-KEY-openEuler
+
+[EPOL_SP2]
+name=EPOL_SP2
+baseurl=http://repo.openeuler.org/openEuler-22.03-LTS-SP2/EPOL/main/$basearch/
+metadata_expire=1h
+enabled=1
+gpgcheck=1
+gpgkey=http://repo.openeuler.org/openEuler-22.03-LTS-SP2/OS/$basearch/RPM-GPG-KEY-openEuler
