@@ -53,14 +53,14 @@ cp redis.conf /etc/redis.conf -f
 systemctl start redis
 
 # 部署aops-zeus
-yum install aops-zeus
+yum install aops-zeus -y
 wget ${file_system}/zeus.ini
 sed -i "s/target_ip/${ip1}/g" zeus.ini
 cp zeus.ini /etc/aops/zeus.ini -f
 systemctl start aops-zeus
 
 # 部署aops-hermes
-yum install aops-hermes
+yum install aops-hermes -y
 wget ${file_system}/aops-nginx.conf
 sed -i "s/target_ip/${ip1}/g" aops-nginx.conf
 cp aops-nginx.conf /etc/nginx/aops-nginx.conf -f
@@ -75,14 +75,14 @@ gpgkey=https://artifacts.elastic.co/GPG-KEY-elasticsearch
 enabled=1
 autorefresh=1
 type=rpm-md" > "/etc/yum.repos.d/aops_elascticsearch.repo"
-yum install elasticsearch-7.14.0-1
+yum install elasticsearch-7.14.0-1 -y
 wget ${file_system}/elasticsearch.yml
 sed -i "s/target_ip/${ip1}/g" elasticsearch.yml
 cp elasticsearch.yml /etc/elasticsearch/elasticsearch.yml -f
 systemctl restart elasticsearch
 
 # 部署aops-apollo
-yum install aops-apollo
+yum install aops-apollo -y
 wget ${file_system}/apollo.ini
 sed -i "s/target_ip/${ip1}/g" apollo.ini
 cp apollo.ini /etc/aops/apollo.ini -f
