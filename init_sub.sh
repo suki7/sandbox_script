@@ -7,7 +7,7 @@ EC_S: TaiShan-200 | openEuler-22.03-LTS aarch64
 INFO
 
 wget $file_system/openEuler.repo
-cp openEuler.repo /etc/yum.repos.d/ -y
+cp openEuler.repo /etc/yum.repos.d/ -f
 
 # 客户端服务部署
 # 部署aops-ceres
